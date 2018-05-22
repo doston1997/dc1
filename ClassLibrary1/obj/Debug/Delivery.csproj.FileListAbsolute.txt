@@ -1,0 +1,16 @@
+C:\Users\avt\Documents\GitHub\delivery clothing\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\avt\Documents\GitHub\delivery clothing\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\avt\Documents\GitHub\delivery clothing\ClassLibrary1\obj\Debug\Delivery.csprojResolveAssemblyReference.cache
+C:\Users\avt\Documents\GitHub\delivery clothing\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\avt\Documents\GitHub\delivery clothing\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\vlad1\Desktop\delivery clothing\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\vlad1\Desktop\delivery clothing\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\vlad1\Desktop\delivery clothing\ClassLibrary1\obj\Debug\Delivery.csprojResolveAssemblyReference.cache
+C:\Users\vlad1\Desktop\delivery clothing\ClassLibrary1\obj\Debug\Delivery.csproj.CoreCompileInputs.cache
+C:\Users\vlad1\Desktop\delivery clothing\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\vlad1\Desktop\delivery clothing\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\avt\Desktop\delivery clothing\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\avt\Desktop\delivery clothing\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\avt\Desktop\delivery clothing\ClassLibrary1\obj\Debug\Delivery.csprojResolveAssemblyReference.cache
+C:\Users\avt\Desktop\delivery clothing\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\avt\Desktop\delivery clothing\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
