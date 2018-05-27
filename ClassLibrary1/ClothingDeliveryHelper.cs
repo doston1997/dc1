@@ -1,22 +1,16 @@
-﻿using ClothingClass;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Xml.Serialization;
 
-namespace ClassLibrary1
+namespace ClothingClass
 {
-    class ClothingDeliveryHelper
+    public class ClothingDeliveryHelper
     {
-        private static readonly XmlSerializer food = new XmlSerializer(typeof(clothing));
+        private static readonly XmlSerializer goods = new XmlSerializer(typeof(clothing));
         public static void WriteToFile(string fileName, clothing data)
         {
             using (var fileStream = File.Create(fileName))
             {
-                food.Serialize(fileStream, data);
+                goods.Serialize(fileStream, data);
             }
         }
 
@@ -24,8 +18,12 @@ namespace ClassLibrary1
         {
             using (var fileStream = File.OpenRead(fileName))
             {
-                return (clothing)food.Deserialize(fileStream);
+                return (clothing)goods.Deserialize(fileStream);
             }
+        }
+        public static clothing LoadFromStream(Stream file)
+        {
+            return (clothing)goods.Deserialize(file);
         }
     }
 }
