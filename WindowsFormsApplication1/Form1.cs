@@ -21,6 +21,8 @@ namespace WindowsFormsApplication1
         {
             return new clothing()
             {
+                FullName = textBox1.Text,
+                WayPoints = textBox2.Text,
                 Filled = dateTimePicker1.Value,
                 Goods = listBox1.Items.OfType<GoodsType>().ToList(),
                 Price = numericUpDown1.Value
@@ -52,6 +54,26 @@ namespace WindowsFormsApplication1
             var si = listBox1.SelectedIndex;
             listBox1.Items.RemoveAt(si);
             RecalculatePrice();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var sfd = new SaveFileDialog() { Filter = "Файлы заказов|*.fd" };
+            var result = sfd.ShowDialog(this);
+            if (result == DialogResult.OK)
+            {
+                var dto = GetModelFromUI();
+                ClothingDeliveryHelper.WriteToFile(sfd.FileName, dto);
+            }
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog() { Filter = "Файл заказа|*.fd" };
+            var result = ofd.ShowDialog(this);
+            if (result == DialogResult.OK)
+            {
+                var dto = ClothingDeliveryHelper.LoadFromFile(ofd.FileName);
+                SetModelToUI(dto);
+            }
         }
         private void RecalculatePrice()
         {
@@ -102,45 +124,6 @@ namespace WindowsFormsApplication1
         {
             button2.Enabled = true;
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            var sfd = new SaveFileDialog() { Filter = "Файлы заказов|*.fd" };
-            var result = sfd.ShowDialog(this);
-            if (result == DialogResult.OK)
-            {
-                var dto = GetModelFromUI();
-                ClothingDeliveryHelper.WriteToFile(sfd.FileName, dto);
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            var ofd = new OpenFileDialog() { Filter = "Файл заказа|*.fd" };
-            var result = ofd.ShowDialog(this);
-            if (result == DialogResult.OK)
-            {
-                var dto = ClothingDeliveryHelper.LoadFromFile(ofd.FileName);
-                SetModelToUI(dto);
-            }
-        }
-
-        private void SetModelToUI(object dto)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    internal class ClothingDeliveryHelper
-    {
-        internal static object LoadFromFile(string fileName)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static void WriteToFile(string fileName, clothing dto)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
+
