@@ -19,7 +19,7 @@ namespace ClothingClass
         /// <summary>
         /// Адресс доставки
         /// </summary>
-        public List<WayPoint> WayPoints { get; set; }
+        public string WayPoints { get; set; }
         /// <summary>
         /// Стоимость
         /// </summary>
@@ -38,31 +38,7 @@ namespace ClothingClass
     {
         Rubles
     }
-    public class WayPoint
-    {
-        /// <summary>
-        /// Улица
-        /// </summary>
-        public string Street { get; set; }
-        /// <summary>
-        /// Номер дома
-        /// </summary>
-        public int HouseNumber { get; set; }
-        /// <summary>
-        /// Номер квартиры
-        /// </summary>
-        public int ApartmentNumber { get; set; }
-        public override string ToString()
-        {
-            return string.Format("{0} {1} {2}", Street, HouseNumber, ApartmentNumber);
-        }
 
-        public WayPoint Clone()
-        {
-            return new WayPoint { Street = Street, HouseNumber = HouseNumber, ApartmentNumber = ApartmentNumber };
-        }
-
-    }
     public class GoodsType
     {
         public GoodsCatalog Catalog { get; set; }
